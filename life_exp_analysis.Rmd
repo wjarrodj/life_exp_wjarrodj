@@ -1,0 +1,14 @@
+---
+title: "Life Expectancy Analysis"
+author: "William J. Jeffcoat"
+date: "1/16/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abstract #
+
+In this RMarkdown file, we will reproduce the famous plot from Oeppen and Vaupel (2002).
