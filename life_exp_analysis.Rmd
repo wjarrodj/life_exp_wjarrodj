@@ -12,3 +12,22 @@ knitr::opts_chunk$set(echo = TRUE)
 # Abstract #
 
 In this RMarkdown file, we will reproduce the famous plot from Oeppen and Vaupel (2002).
+
+# Analysis #
+
+```{r}
+
+# Load the gapminder package and the gapminder_unfiltered data frame #
+library(gapminder)
+gapminder=gapminder::gapminder_unfiltered
+
+# Identify the Maximum Life Expectancy each year, along with the corresponding country #
+gapminder %>%
+  select(country,year,lifeExp) %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  arrange(year)
+
+```
+
+# Plot #
